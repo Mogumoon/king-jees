@@ -38,4 +38,68 @@ alert("the result is ${1 + 2}"); // the result is ${1 + 2}
 //==========================================================
 
 //====================== BOLEAN (True, False) ================
+// the boolean type has only two values : true and false
+
+let nameFieldChecked = true; // yes, name field is checked
+let ageFieldCheked = false; //no,age field is not checked
+
+//Boolean values also come as a result of comparisons:
+let isGreater = 4 > 1;
+alert(isGreater); // true
+// ===========================================================
+
+//================== THE "NULL" VALUE (empty) ================
+//the null value its mean empty not zero
+let age = null;
+//===========================================================
+
+//================= THE "UNDEFINED" VALUE ===================
+// the meaning of undefined is (value is not asigned)
+
+let age1;
+alert(age1); // shows "undefined"
+
+//change the value to undefined
+let age2 = 100;
+
+age2 = undefined;
+alert(age2); // undefined
+
+//================= OBJECT AND SYMBOLS ===================
+/*The object type is special.
+All other types are called “primitive” because their values can
+contain only a single thing (be it a string or a number or whatever). 
+In contrast, objects are used to store collections of
+data and more complex entities.
+ */
+//===========================================================
+
+//==================== THE TYPEOF OPERATOR ===================
+// the typeof operator returns the type of the operand
+// its useful when we want to process values of different types
+// differently or just want to do a quick check
+
+typeof undefined; // "undefined"
+typeof 0; // "number"
+typeof 10n; // "bigint"
+typeof true; // "bolean"
+typeof "foo"; // "string"
+typeof Symbol("id"); // "symbol"
+typeof Math; // "object" (1)
+typeof null; // "object" (2)
+typeof alert; // "function" (3)
+//=============================================================
+
+//================== SUMMARY =================================
+// there are 8 basic data types in JavaScript
+// number = for numbers of any kind
+// bigint = for integer numbers of arbitrary length.
+// string = character use quotes or backticks
+// boolean = true / false
+// null = empty not zero
+// undefined = value is no asigned
+// symbol = for uniqe identifiers
+// object = for more complex data structures
+//============================================================
+
 
