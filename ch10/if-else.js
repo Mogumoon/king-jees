@@ -80,3 +80,48 @@ let result = condition ? value1 : value2;
 // the comparison operator "age > 18" executes first anyway
 // (no need to wrap it into parentheses)
 //let accessAllowed = age > 18 ? true : false;
+//====================================================================================
+
+//=================== MUTIPLE =========================================================
+// A sequence of question mark operators ? can return a value that depends on more than one condition.
+// For instance:
+let age1 = prompt("age?", 18);
+
+let message =
+  age1 < 3
+    ? "Hi, baby!"
+    : age1 < 18
+      ? "Hello!"
+      : age1 < 100
+        ? "Greatings !"
+        : "What an unusual age!";
+
+alert(message);
+
+//Here's how this look using if else
+//   if (age < 3) {
+//   message = 'Hi, baby!';
+// } else if (age < 18) {
+//   message = 'Hello!';
+// } else if (age < 100) {
+//   message = 'Greetings!';
+// } else {
+//   message = 'What an unusual age!';
+// }
+
+//=================== NON-TRADITIONAL USE OF? ===============================================
+// Sometimes the question mark ? is used as a replacement for if:
+let company = prompt("which company created javascript?", "");
+
+(company == "NetScape")
+? alert("correct") : alert("wrong")
+// note: It’s not recommended to use the question mark operator in this way.
+
+// Here is the same code using if for comparison:
+// let company = prompt('Which company created JavaScript?', '');
+
+// if (company == 'Netscape') {
+//   alert('Right!');
+// } else {
+//   alert('Wrong.');
+// }
