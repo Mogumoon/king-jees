@@ -51,20 +51,20 @@ if (nut == 1) {
 
 //===================== SEVERAL CONDITIONS : "ELSE IF" ======================
 // Sometimes, we’d like to test several variants of a condition. The else if clause lets us do that.
-let age = prompt ("how old are you?");
+let age = prompt("how old are you?");
 
-if (age < 20){
-    alert("you are so young")
-}else if (age > 20){
-    alert(" you are so old man")
-}else {
-    alert("input correctly please")
+if (age < 20) {
+  alert("you are so young");
+} else if (age > 20) {
+  alert(" you are so old man");
+} else {
+  alert("input correctly please");
 }
 
 //================= CONDITIONAL OPERATOR "?" ==================================
 // Sometimes, we need to assign a variable depending on a condition.
 let accessAllowed;
-let umur = prompt('How old are you?', '');
+let umur = prompt("How old are you?", "");
 
 if (umur > 18) {
   accessAllowed = true;
@@ -74,7 +74,7 @@ if (umur > 18) {
 
 alert(accessAllowed);
 
-// for example 
+// for example
 let result = condition ? value1 : value2;
 //let accessAllowed = (age > 18) ? true : false;
 // the comparison operator "age > 18" executes first anyway
@@ -113,8 +113,7 @@ alert(message);
 // Sometimes the question mark ? is used as a replacement for if:
 let company = prompt("which company created javascript?", "");
 
-(company == "NetScape")
-? alert("correct") : alert("wrong")
+company == "NetScape" ? alert("correct") : alert("wrong");
 // note: It’s not recommended to use the question mark operator in this way.
 
 // Here is the same code using if for comparison:
@@ -125,3 +124,38 @@ let company = prompt("which company created javascript?", "");
 // } else {
 //   alert('Wrong.');
 // }
+
+//========================== TASK ==================================================================
+//Rewrite this if using the conditional operator '?':
+// let resultt;
+
+// if (a + b < 4) {
+//   resultt = 'Below';
+// } else {
+//   resultt = 'Over';
+// }
+// answer
+let resultt = a + b < 4 ? "beloow" : "over";
+
+//Rewrite if..else using multiple ternary operators '?'.
+// let message;
+
+// if (login == 'Employee') {
+//   message = 'Hello';
+// } else if (login == 'Director') {
+//   message = 'Greetings';
+// } else if (login == '') {
+//   message = 'No login';
+// } else {
+//   message = '';
+// }
+
+// answer
+let messagee =
+  (login == "Employe")
+    ? "hello"
+    : (login == "Director")
+      ? "Greetings"
+      : (login == "")
+        ? "no login"
+        : "";
