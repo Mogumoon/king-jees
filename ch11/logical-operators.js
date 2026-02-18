@@ -64,9 +64,9 @@ alert(undefined || null || 0); // 0 (all falsy, returns the last value)
 
 let firstName = "";
 let lastName = "";
-let nickName= "jokowi";
+let nickName = "jokowi";
 
-alert( firstName || lastName || nickName || "prabowo"); // jokowi
+alert(firstName || lastName || nickName || "prabowo"); // jokowi
 // If all variables were falsy, "prabowo" would show up.
 
 // 2
@@ -82,3 +82,74 @@ In the example below, only the second message is printed: */
 true || alert("not printed");
 false || alert("printed");
 //In the first line, the OR || operator stops the evaluation immediately upon seeing true, so the alert isn’t run.
+
+// <=== kesimpulan OR (||) ===>
+// truthy = akan mengambil nilai pertama dari kiri
+// falsy = akan mengambil nilai paling kanan 
+
+//======================== && (AND) =========================================================================================
+// The AND operator is represented with two ampersands &&:
+result = a && b;
+// In classical programming, AND returns true if both operands are truthy and false otherwise:
+// selama masih ada false dia false
+alert(true && true); // true
+alert(false && true); // false
+alert(true && false); // false
+alert(false && false); // false
+
+// ==== An example with if: =====
+let waktu = 12;
+let menit = 30;
+
+if (waktu == 12 && menit == 30) {
+  alert("the time is 12:30");
+} // kedua kondisi true
+
+// Just as with OR, any value is allowed as an operand of AND:
+if (1 && 0){// evaluated as true && false
+  alert("won't work, because the result is falsy");
+}
+
+// ==== AND “&&” finds the first falsy value ====
+//Given multiple AND’ed values:
+result = value1 && value2 && value3;
+
+// if the first operand is truthy,
+// AND returns the second operand:
+alert( 1 && 0 ); // 0
+alert( 1 && 5 ); // 5
+
+// if the first operand is falsy,
+// AND returns it. The second operand is ignored
+alert( null && 5 ); // null
+alert( 0 && "no matter what" ); // 0
+ 
+// We can also pass several values in a row. See how the first falsy one is returned:
+alert( 1 && 2 && null && 3 ); // null
+// When all values are truthy, the last value is returned:
+alert( 1 && 2 && 3 ); // 3, the last one
+
+// === kesimpulan AND (&&) ===
+// falsy = jika falsy dia akan mengambil nilai salah pertama
+// truthy = jika truthy dia akan mengambil nilai paling terkahir
+
+//===================== ! (NOT) =============================================================
+// The boolean NOT operator is represented with an exclamation sign !.
+result = !value;
+
+// The operator accepts a single argument and does the following:
+
+// 1. Converts the operand to boolean type: true/false.
+// 2. Returns the inverse value.
+
+// For instance:
+alert(!true); // false
+alert(!false); // true
+
+// A double NOT !! is sometimes used for converting a value to boolean type:
+alert( !!"non-empty string" ); // true
+alert( !!null )// false
+
+// There’s a little more verbose way to do the same thing – a built-in Boolean function:
+alert( Boolean("non-empty string") ); // true
+alert( Boolean(null) ); // false
